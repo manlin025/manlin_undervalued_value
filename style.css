@@ -1,0 +1,224 @@
+/* Basic page layout */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 36px 20px;
+  background: #f6f4ef;
+  color: #292923;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.site-header,
+.postcards,
+.site-footer {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.site-header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.site-header p {
+  margin: 0;
+}
+
+/* Show the postcard selected by the link's #id.
+   If no postcard is selected, show the first photograph. */
+.moment {
+  display: none;
+  scroll-margin-top: 20px;
+}
+
+.moment:target,
+.postcards:not(:has(.moment:target)) > .moment:first-child {
+  display: block;
+}
+
+/* The front and back occupy matching areas. */
+.postcard {
+  margin: 0;
+  padding: 20px;
+  background: #fffefa;
+  border: 1px solid #c5c1b7;
+}
+
+.photo-window,
+.back-content {
+  aspect-ratio: 3 / 2;
+}
+
+.photo-window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efede7;
+}
+
+.photo-window img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Keep both portrait and landscape photos fully visible. */
+}
+
+figcaption,
+.back-location {
+  margin: 16px 0 0;
+  font-size: 15px;
+}
+
+.back-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 24px;
+  padding: 24px 4px;
+}
+
+.observation h2 {
+  margin: 0 0 24px;
+  font-size: 24px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+.observation p {
+  margin: 0;
+  max-width: 36ch;
+  font-size: 20px;
+  font-family: Georgia, serif;
+  line-height: 1.8;
+}
+
+.postcard-mark {
+  border-left: 1px solid #c5c1b7;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.postcard-mark span {
+  display: block;
+  padding: 12px 6px;
+  border: 1px dashed #9c978b;
+  font-size: 14px;
+}
+
+/* User controls */
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+.moment:focus-visible {
+  outline: 3px solid #514d3f;
+  outline-offset: 5px;
+}
+
+.flip-link {
+  margin: 22px 0;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 1px solid #7b766a;
+  background: #fffefa;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #eae7df;
+}
+
+.moment-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.moment-nav a {
+  padding: 12px 0;
+}
+
+.counter {
+  white-space: nowrap;
+}
+
+.unavailable {
+  color: #69655e;
+}
+
+.site-footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* These headings remain available to screen readers. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 540px) {
+  body {
+    padding: 28px 16px;
+  }
+
+  .postcard {
+    padding: 12px;
+  }
+
+  .photo-window,
+  .back-content {
+    aspect-ratio: 4 / 5;
+  }
+
+  .back-content {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px 6px;
+  }
+
+  .observation h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .observation p {
+    font-size: 18px;
+  }
+
+  .postcard-mark {
+    display: none;
+  }
+}

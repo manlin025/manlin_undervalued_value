@@ -1,0 +1,439 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nothing Happened Here</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Nothing Happened Here</h1>
+    <p>Small, everyday moments from my travels.</p>
+  </header>
+
+  <main class="postcards" aria-label="Travel postcards">
+    <!-- POSTCARD 1: Aruba / Aruba.JPG -->
+    <section class="moment" id="aruba-photo" tabindex="-1" aria-labelledby="aruba-front-title">
+      <h2 class="sr-only" id="aruba-front-title">Aruba — photo</h2>
+      <figure class="postcard photo-card">
+        <div class="photo-window">
+          <img src="assets/images/Aruba.JPG"
+               alt="An open doorway framing a balcony, water, and the sky." decoding="async">
+        </div>
+        <figcaption>Aruba</figcaption>
+      </figure>
+      <div class="flip-link"><a class="button" href="#aruba-back">Turn it over</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <span class="unavailable" aria-disabled="true">Previous</span>
+        <span class="counter">Moment 1 / 11</span>
+        <a href="#beijing-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <section class="moment" id="aruba-back" tabindex="-1" aria-labelledby="aruba-back-title">
+      <div class="postcard back-card">
+        <div class="back-content">
+          <div class="observation">
+            <h2 id="aruba-back-title">A moment I noticed</h2>
+            <!-- Draft based on the photo thumbnail: replace with your own observation. -->
+            <p>A view through an open door. The doorway makes a small frame for the water and sky.</p>
+          </div>
+          <div class="postcard-mark" aria-hidden="true"><span>From<br>Aruba</span></div>
+        </div>
+        <p class="back-location">Aruba</p>
+      </div>
+      <div class="flip-link"><a class="button" href="#aruba-photo">Back to photo</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <span class="unavailable" aria-disabled="true">Previous</span>
+        <span class="counter">Moment 1 / 11</span>
+        <a href="#beijing-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <!-- POSTCARD 2: Beijing / Beijing.jpg -->
+    <section class="moment" id="beijing-photo" tabindex="-1" aria-labelledby="beijing-front-title">
+      <h2 class="sr-only" id="beijing-front-title">Beijing — photo</h2>
+      <figure class="postcard photo-card">
+        <div class="photo-window">
+          <img src="assets/images/Beijing.jpg"
+               alt="A path beneath green trees with sunlight falling across it." decoding="async" loading="lazy">
+        </div>
+        <figcaption>Beijing</figcaption>
+      </figure>
+      <div class="flip-link"><a class="button" href="#beijing-back">Turn it over</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#aruba-photo">Previous</a>
+        <span class="counter">Moment 2 / 11</span>
+        <a href="#chapel-hill-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <section class="moment" id="beijing-back" tabindex="-1" aria-labelledby="beijing-back-title">
+      <div class="postcard back-card">
+        <div class="back-content">
+          <div class="observation">
+            <h2 id="beijing-back-title">A moment I noticed</h2>
+            <!-- Draft based on the photo thumbnail: replace with your own observation. -->
+            <p>Sunlight falls through the trees. Small patches of light break up the path.</p>
+          </div>
+          <div class="postcard-mark" aria-hidden="true"><span>From<br>Beijing</span></div>
+        </div>
+        <p class="back-location">Beijing</p>
+      </div>
+      <div class="flip-link"><a class="button" href="#beijing-photo">Back to photo</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#aruba-photo">Previous</a>
+        <span class="counter">Moment 2 / 11</span>
+        <a href="#chapel-hill-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <!-- POSTCARD 3: Chapel Hill / Chapel hill.jpg -->
+    <section class="moment" id="chapel-hill-photo" tabindex="-1" aria-labelledby="chapel-hill-front-title">
+      <h2 class="sr-only" id="chapel-hill-front-title">Chapel Hill — photo</h2>
+      <figure class="postcard photo-card">
+        <div class="photo-window">
+          <img src="assets/images/Chapel%20hill.jpg"
+               alt="Trees and a lawn in front of brick buildings." decoding="async" loading="lazy">
+        </div>
+        <figcaption>Chapel Hill</figcaption>
+      </figure>
+      <div class="flip-link"><a class="button" href="#chapel-hill-back">Turn it over</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#beijing-photo">Previous</a>
+        <span class="counter">Moment 3 / 11</span>
+        <a href="#Evaston-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <section class="moment" id="chapel-hill-back" tabindex="-1" aria-labelledby="chapel-hill-back-title">
+      <div class="postcard back-card">
+        <div class="back-content">
+          <div class="observation">
+            <h2 id="chapel-hill-back-title">A moment I noticed</h2>
+            <!-- Draft based on the photo thumbnail: replace with your own observation. -->
+            <p>Trees stand between the lawn and the buildings. Their branches divide the view into little pieces.</p>
+          </div>
+          <div class="postcard-mark" aria-hidden="true"><span>From<br>Chapel Hill</span></div>
+        </div>
+        <p class="back-location">Chapel Hill</p>
+      </div>
+      <div class="flip-link"><a class="button" href="#chapel-hill-photo">Back to photo</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#beijing-photo">Previous</a>
+        <span class="counter">Moment 3 / 11</span>
+        <a href="#Evaston-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <!-- POSTCARD 4: Evaston / Evaston.jpg -->
+    <section class="moment" id="Evaston-photo" tabindex="-1" aria-labelledby="Evaston-front-title">
+      <h2 class="sr-only" id="Evaston-front-title">Evaston — photo</h2>
+      <figure class="postcard photo-card">
+        <div class="photo-window">
+          <img src="assets/images/Evaston.jpg"
+               alt="A curved path beneath trees and an orange evening sky." decoding="async" loading="lazy">
+        </div>
+        <figcaption>Evaston</figcaption>
+      </figure>
+      <div class="flip-link"><a class="button" href="#Evaston-back">Turn it over</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#chapel-hill-photo">Previous</a>
+        <span class="counter">Moment 4 / 11</span>
+        <a href="#kyoto-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <section class="moment" id="Evaston-back" tabindex="-1" aria-labelledby="Evaston-back-title">
+      <div class="postcard back-card">
+        <div class="back-content">
+          <div class="observation">
+            <h2 id="Evaston-back-title">A moment I noticed</h2>
+            <!-- Draft based on the photo thumbnail: replace with your own observation. -->
+            <p>The path curves beneath an evening sky. Along the horizon, the color is still changing.</p>
+          </div>
+          <div class="postcard-mark" aria-hidden="true"><span>From<br>Evaston</span></div>
+        </div>
+        <p class="back-location">Evaston</p>
+      </div>
+      <div class="flip-link"><a class="button" href="#Evaston-photo">Back to photo</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#chapel-hill-photo">Previous</a>
+        <span class="counter">Moment 4 / 11</span>
+        <a href="#kyoto-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <!-- POSTCARD 5: Kyoto / Kyoto.JPG -->
+    <section class="moment" id="kyoto-photo" tabindex="-1" aria-labelledby="kyoto-front-title">
+      <h2 class="sr-only" id="kyoto-front-title">Kyoto — photo</h2>
+      <figure class="postcard photo-card">
+        <div class="photo-window">
+          <img src="assets/images/Kyoto.JPG"
+               alt="A pale pink rose against a background of dark leaves." decoding="async" loading="lazy">
+        </div>
+        <figcaption>Kyoto</figcaption>
+      </figure>
+      <div class="flip-link"><a class="button" href="#kyoto-back">Turn it over</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#Evaston-photo">Previous</a>
+        <span class="counter">Moment 5 / 11</span>
+        <a href="#la-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <section class="moment" id="kyoto-back" tabindex="-1" aria-labelledby="kyoto-back-title">
+      <div class="postcard back-card">
+        <div class="back-content">
+          <div class="observation">
+            <h2 id="kyoto-back-title">A moment I noticed</h2>
+            <!-- Draft based on the photo thumbnail: replace with your own observation. -->
+            <p>A little light catches the edges of the petals. The leaves behind them fall into shadow.</p>
+          </div>
+          <div class="postcard-mark" aria-hidden="true"><span>From<br>Kyoto</span></div>
+        </div>
+        <p class="back-location">Kyoto</p>
+      </div>
+      <div class="flip-link"><a class="button" href="#kyoto-photo">Back to photo</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#Evaston-photo">Previous</a>
+        <span class="counter">Moment 5 / 11</span>
+        <a href="#la-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <!-- POSTCARD 6: LA / LA.JPG -->
+    <section class="moment" id="la-photo" tabindex="-1" aria-labelledby="la-front-title">
+      <h2 class="sr-only" id="la-front-title">LA — photo</h2>
+      <figure class="postcard photo-card">
+        <div class="photo-window">
+          <img src="assets/images/LA.JPG"
+               alt="A cluster of pale flowers surrounded by green leaves." decoding="async" loading="lazy">
+        </div>
+        <figcaption>LA</figcaption>
+      </figure>
+      <div class="flip-link"><a class="button" href="#la-back">Turn it over</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#kyoto-photo">Previous</a>
+        <span class="counter">Moment 6 / 11</span>
+        <a href="#cambridge-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <section class="moment" id="la-back" tabindex="-1" aria-labelledby="la-back-title">
+      <div class="postcard back-card">
+        <div class="back-content">
+          <div class="observation">
+            <h2 id="la-back-title">A moment I noticed</h2>
+            <!-- Draft based on the photo thumbnail: replace with your own observation. -->
+            <p>Small pale flowers gather into one shape. Looking closer, each flower has its own edges.</p>
+          </div>
+          <div class="postcard-mark" aria-hidden="true"><span>From<br>LA</span></div>
+        </div>
+        <p class="back-location">LA</p>
+      </div>
+      <div class="flip-link"><a class="button" href="#la-photo">Back to photo</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#kyoto-photo">Previous</a>
+        <span class="counter">Moment 6 / 11</span>
+        <a href="#cambridge-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <!-- POSTCARD 7: Cambridge / Cambridge.jpg -->
+    <section class="moment" id="cambridge-photo" tabindex="-1" aria-labelledby="cambridge-front-title">
+      <h2 class="sr-only" id="cambridge-front-title">Cambridge — photo</h2>
+      <figure class="postcard photo-card">
+        <div class="photo-window">
+          <img src="assets/images/Cambridge.jpg"
+               alt="Evening clouds and a dark shoreline reflected in water." decoding="async" loading="lazy">
+        </div>
+        <figcaption>Cambridge</figcaption>
+      </figure>
+      <div class="flip-link"><a class="button" href="#cambridge-back">Turn it over</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#la-photo">Previous</a>
+        <span class="counter">Moment 7 / 11</span>
+        <a href="#paris-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <section class="moment" id="cambridge-back" tabindex="-1" aria-labelledby="cambridge-back-title">
+      <div class="postcard back-card">
+        <div class="back-content">
+          <div class="observation">
+            <h2 id="cambridge-back-title">A moment I noticed</h2>
+            <!-- Draft based on the photo thumbnail: replace with your own observation. -->
+            <p>The sky appears twice: once above the shore, and once on the water.</p>
+          </div>
+          <div class="postcard-mark" aria-hidden="true"><span>From<br>Cambridge</span></div>
+        </div>
+        <p class="back-location">Cambridge</p>
+      </div>
+      <div class="flip-link"><a class="button" href="#cambridge-photo">Back to photo</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#la-photo">Previous</a>
+        <span class="counter">Moment 7 / 11</span>
+        <a href="#paris-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <!-- POSTCARD 8: Paris / Paris.jpg -->
+    <section class="moment" id="paris-photo" tabindex="-1" aria-labelledby="paris-front-title">
+      <h2 class="sr-only" id="paris-front-title">Paris — photo</h2>
+      <figure class="postcard photo-card">
+        <div class="photo-window">
+          <img src="assets/images/Paris.jpg"
+               alt="Rows of fruit arranged in boxes at a market." decoding="async" loading="lazy">
+        </div>
+        <figcaption>Paris</figcaption>
+      </figure>
+      <div class="flip-link"><a class="button" href="#paris-back">Turn it over</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#cambridge-photo">Previous</a>
+        <span class="counter">Moment 8 / 11</span>
+        <a href="#qinhuangdao-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <section class="moment" id="paris-back" tabindex="-1" aria-labelledby="paris-back-title">
+      <div class="postcard back-card">
+        <div class="back-content">
+          <div class="observation">
+            <h2 id="paris-back-title">A moment I noticed</h2>
+            <!-- Draft based on the photo thumbnail: replace with your own observation. -->
+            <p>Rows of fruit make small blocks of color. There is a different shape in every box.</p>
+          </div>
+          <div class="postcard-mark" aria-hidden="true"><span>From<br>Paris</span></div>
+        </div>
+        <p class="back-location">Paris</p>
+      </div>
+      <div class="flip-link"><a class="button" href="#paris-photo">Back to photo</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#cambridge-photo">Previous</a>
+        <span class="counter">Moment 8 / 11</span>
+        <a href="#qinhuangdao-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <!-- POSTCARD 9: Qinhuangdao / Qinhuangdao.jpg -->
+    <section class="moment" id="qinhuangdao-photo" tabindex="-1" aria-labelledby="qinhuangdao-front-title">
+      <h2 class="sr-only" id="qinhuangdao-front-title">Qinhuangdao — photo</h2>
+      <figure class="postcard photo-card">
+        <div class="photo-window">
+          <img src="assets/images/Qinhuangdao.jpg"
+               alt="A light-colored house framed by green trees." decoding="async" loading="lazy">
+        </div>
+        <figcaption>Qinhuangdao</figcaption>
+      </figure>
+      <div class="flip-link"><a class="button" href="#qinhuangdao-back">Turn it over</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#paris-photo">Previous</a>
+        <span class="counter">Moment 9 / 11</span>
+        <a href="#tokyo-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <section class="moment" id="qinhuangdao-back" tabindex="-1" aria-labelledby="qinhuangdao-back-title">
+      <div class="postcard back-card">
+        <div class="back-content">
+          <div class="observation">
+            <h2 id="qinhuangdao-back-title">A moment I noticed</h2>
+            <!-- Draft based on the photo thumbnail: replace with your own observation. -->
+            <p>A pale wall sits between the trees. Green leaves reach into the view from both sides.</p>
+          </div>
+          <div class="postcard-mark" aria-hidden="true"><span>From<br>Qinhuangdao</span></div>
+        </div>
+        <p class="back-location">Qinhuangdao</p>
+      </div>
+      <div class="flip-link"><a class="button" href="#qinhuangdao-photo">Back to photo</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#cambridge-photo">Previous</a>
+        <span class="counter">Moment 9 / 11</span>
+        <a href="#tokyo-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <!-- POSTCARD 10: Tokyo / Tokyo.JPG -->
+    <section class="moment" id="tokyo-photo" tabindex="-1" aria-labelledby="tokyo-front-title">
+      <h2 class="sr-only" id="tokyo-front-title">Tokyo — photo</h2>
+      <figure class="postcard photo-card">
+        <div class="photo-window">
+          <img src="assets/images/Tokyo.JPG"
+               alt="Blue hydrangeas among dense green leaves." decoding="async" loading="lazy">
+        </div>
+        <figcaption>Tokyo</figcaption>
+      </figure>
+      <div class="flip-link"><a class="button" href="#tokyo-back">Turn it over</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#Irvine-photo">Previous</a>
+        <span class="counter">Moment 10 / 11</span>
+        <a href="#Irvine-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <section class="moment" id="tokyo-back" tabindex="-1" aria-labelledby="tokyo-back-title">
+      <div class="postcard back-card">
+        <div class="back-content">
+          <div class="observation">
+            <h2 id="tokyo-back-title">A moment I noticed</h2>
+            <!-- Draft based on the photo thumbnail: replace with your own observation. -->
+            <p>Several shades of blue sit among the leaves. Even the flowers beside each other are different.</p>
+          </div>
+          <div class="postcard-mark" aria-hidden="true"><span>From<br>Tokyo</span></div>
+        </div>
+        <p class="back-location">Tokyo</p>
+      </div>
+      <div class="flip-link"><a class="button" href="#tokyo-photo">Back to photo</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#Irvine-photo">Previous</a>
+        <span class="counter">Moment 10 / 11</span>
+        <a href="#Irvine-photo">Next moment</a>
+      </nav>
+    </section>
+
+    <!-- POSTCARD 11: Irvine / Irvine.jpg -->
+    <section class="moment" id="Irvine-photo" tabindex="-1" aria-labelledby="Irvine-front-title">
+      <h2 class="sr-only" id="Irvine-front-title">Irvine — photo</h2>
+      <figure class="postcard photo-card">
+        <div class="photo-window">
+          <img src="assets/images/Irvine.jpg"
+               alt="White waves meeting the shore beneath a blue sky." decoding="async" loading="lazy">
+        </div>
+        <figcaption>Irvine</figcaption>
+      </figure>
+      <div class="flip-link"><a class="button" href="#Irvine-back">Turn it over</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#tokyo-photo">Previous</a>
+        <span class="counter">Moment 11 / 11</span>
+        <span class="unavailable" aria-disabled="true">Next moment</span>
+      </nav>
+    </section>
+
+    <section class="moment" id="Irvine-back" tabindex="-1" aria-labelledby="Irvine-back-title">
+      <div class="postcard back-card">
+        <div class="back-content">
+          <div class="observation">
+            <h2 id="Irvine-back-title">A moment I noticed</h2>
+            <!-- Draft based on the photo thumbnail: replace with your own observation. -->
+            <p>A thin line of white marks where a wave meets the shore. There is another line just behind it.</p>
+          </div>
+          <div class="postcard-mark" aria-hidden="true"><span>From<br>Irvine</span></div>
+        </div>
+        <p class="back-location">Irvine</p>
+      </div>
+      <div class="flip-link"><a class="button" href="#Irvine-photo">Back to photo</a></div>
+      <nav class="moment-nav" aria-label="Choose a moment">
+        <a href="#tokyo-photo">Previous</a>
+        <span class="counter">Moment 11 / 11</span>
+        <span class="unavailable" aria-disabled="true">Next moment</span>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="https://github.com/manlin025/manlin_undervalued_value/tree/HEAD/assets">View Project Materials</a>
+  </footer>
+</body>
+</html>
