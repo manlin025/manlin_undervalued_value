@@ -117,6 +117,17 @@ figcaption,
   font-size: 14px;
 }
 
+/* Slow postcard flip */
+.postcard {
+  transition: opacity 0.5s ease,
+              transform 0.5s ease;
+}
+
+.postcard.fading {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
 /* User controls */
 a {
   color: inherit;
@@ -138,16 +149,23 @@ a:focus-visible,
   text-align: center;
 }
 
+/* User controls */
 .button {
   display: inline-block;
   padding: 10px 24px;
   border: 1px solid #7b766a;
   background: #fffefa;
   text-decoration: none;
+
+  transition: background 0.8s ease,
+              color 0.8s ease,
+              transform 0.8s ease;
 }
 
 .button:hover {
-  background: #eae7df;
+  background: #292923;
+  color: #fffefa;
+  transform: translateY(-2px);
 }
 
 .moment-nav {

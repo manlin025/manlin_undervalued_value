@@ -5,11 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nothing Happened Here</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* The pause is part of the idea: the interface asks the viewer to slow down. */
+    .button[aria-busy="true"] {
+      pointer-events: none;
+      cursor: wait;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .postcard {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <h1>Nothing Happened Here</h1>
-    <p>Small, everyday moments from my travels.</p>
+    <p>Small, everyday moments from my travels. Take your time. Look once, then look again.</p>
   </header>
 
   <main class="postcards" aria-label="Travel postcards">
@@ -21,7 +34,7 @@
           <img src="assets/images/Aruba.JPG"
                alt="An open doorway framing a balcony, water, and the sky." decoding="async">
         </div>
-        <figcaption>Aruba</figcaption>
+        <figcaption>Palm Beach, Aruba</figcaption>
       </figure>
       <div class="flip-link"><a class="button" href="#aruba-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -35,12 +48,12 @@
       <div class="postcard back-card">
         <div class="back-content">
           <div class="observation">
-            <h2 id="aruba-back-title">A moment I noticed</h2>
+            <h2 id="aruba-back-title">A moment I looked out</h2>
             <p>A view through an open door. The doorway makes a small frame for the water and sky.</p>
           </div>
           <div class="postcard-mark" aria-hidden="true"><span>From<br>Aruba</span></div>
         </div>
-        <p class="back-location">Aruba</p>
+        <p class="back-location">Palm Beach, Aruba</p>
       </div>
       <div class="flip-link"><a class="button" href="#aruba-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -58,7 +71,7 @@
           <img src="assets/images/Beijing.jpg"
                alt="A path beneath green trees with sunlight falling across it." decoding="async" loading="lazy">
         </div>
-        <figcaption>Beijing</figcaption>
+        <figcaption>Beijing, China</figcaption>
       </figure>
       <div class="flip-link"><a class="button" href="#beijing-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -77,7 +90,7 @@
           </div>
           <div class="postcard-mark" aria-hidden="true"><span>From<br>Beijing</span></div>
         </div>
-        <p class="back-location">Beijing</p>
+        <p class="back-location">Beijing, China</p>
       </div>
       <div class="flip-link"><a class="button" href="#beijing-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -95,7 +108,7 @@
           <img src="assets/images/Chapel%20hill.jpg"
                alt="Trees and a lawn in front of brick buildings." decoding="async" loading="lazy">
         </div>
-        <figcaption>Chapel Hill</figcaption>
+        <figcaption>Chapel Hill, North Carolina</figcaption>
       </figure>
       <div class="flip-link"><a class="button" href="#chapel-hill-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -109,12 +122,12 @@
       <div class="postcard back-card">
         <div class="back-content">
           <div class="observation">
-            <h2 id="chapel-hill-back-title">A moment I noticed</h2>
-            <p>Trees stand between the lawn and the buildings. Their branches divide the view into little pieces.</p>
+            <h2 id="chapel-hill-back-title">A moment I wandered</h2>
+            <p>I wandered without a destination. The campus looked different when I wasn't rushing somewhere.</p>
           </div>
           <div class="postcard-mark" aria-hidden="true"><span>From<br>Chapel Hill</span></div>
         </div>
-        <p class="back-location">Chapel Hill</p>
+        <p class="back-location">Chapel Hill, North Carolina</p>
       </div>
       <div class="flip-link"><a class="button" href="#chapel-hill-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -130,9 +143,9 @@
       <figure class="postcard photo-card">
         <div class="photo-window">
           <img src="assets/images/Evaston.jpg"
-               alt="A curved path beneath trees and an orange evening sky." decoding="async" loading="lazy">
+               alt="A tree-lined street." decoding="async" loading="lazy">
         </div>
-        <figcaption>Evaston</figcaption>
+        <figcaption>Evaston, Illinois</figcaption>
       </figure>
       <div class="flip-link"><a class="button" href="#Evaston-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -146,12 +159,12 @@
       <div class="postcard back-card">
         <div class="back-content">
           <div class="observation">
-            <h2 id="Evaston-back-title">A moment I noticed</h2>
-            <p>A tree lined street.</p>
+            <h2 id="Evaston-back-title">A moment I stopped</h2>
+            <p>A tree lined street I had never walked before, yet somehow it felt familiar.</p>
           </div>
           <div class="postcard-mark" aria-hidden="true"><span>From<br>Evaston</span></div>
         </div>
-        <p class="back-location">Evaston</p>
+        <p class="back-location">Evaston, Illinois</p>
       </div>
       <div class="flip-link"><a class="button" href="#Evaston-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -167,9 +180,9 @@
       <figure class="postcard photo-card">
         <div class="photo-window">
           <img src="assets/images/Kyoto.JPG"
-               alt="A pale pink rose against a background of dark leaves." decoding="async" loading="lazy">
+               alt="Two pale pink paper cranes against a background of dark leaves." decoding="async" loading="lazy">
         </div>
-        <figcaption>Kyoto</figcaption>
+        <figcaption>Kyoto, Japan</figcaption>
       </figure>
       <div class="flip-link"><a class="button" href="#kyoto-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -183,12 +196,12 @@
       <div class="postcard back-card">
         <div class="back-content">
           <div class="observation">
-            <h2 id="kyoto-back-title">A moment I noticed</h2>
-            <p>A little light catches the edges of the petals. The leaves behind them fall into shadow.</p>
+            <h2 id="kyoto-back-title">A moment I carried home</h2>
+            <p>In Arashiyama, a café owner folded a small piece of the journey into my hands.</p>
           </div>
           <div class="postcard-mark" aria-hidden="true"><span>From<br>Kyoto</span></div>
         </div>
-        <p class="back-location">Kyoto</p>
+        <p class="back-location">Kyoto, Japan</p>
       </div>
       <div class="flip-link"><a class="button" href="#kyoto-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -206,7 +219,7 @@
           <img src="assets/images/LA.JPG"
                alt="A cluster of pale flowers surrounded by green leaves." decoding="async" loading="lazy">
         </div>
-        <figcaption>LA</figcaption>
+        <figcaption>Los Angeles, California</figcaption>
       </figure>
       <div class="flip-link"><a class="button" href="#la-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -220,12 +233,12 @@
       <div class="postcard back-card">
         <div class="back-content">
           <div class="observation">
-            <h2 id="la-back-title">A moment I noticed</h2>
-            <p>Small pale flowers gather into one shape. Looking closer, each flower has its own edges.</p>
+            <h2 id="la-back-title">A moment I looked closer</h2>
+            <p>Somewhere in Beverly Hills, small pale flowers gather into one shape. Looking closer, each flower has its own edges.</p>
           </div>
           <div class="postcard-mark" aria-hidden="true"><span>From<br>LA</span></div>
         </div>
-        <p class="back-location">LA</p>
+        <p class="back-location">Los Angeles, California</p>
       </div>
       <div class="flip-link"><a class="button" href="#la-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -243,7 +256,7 @@
           <img src="assets/images/Cambridge.jpg"
                alt="Evening clouds and a dark shoreline reflected in water." decoding="async" loading="lazy">
         </div>
-        <figcaption>Cambridge</figcaption>
+        <figcaption>Cambridge, England</figcaption>
       </figure>
       <div class="flip-link"><a class="button" href="#cambridge-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -257,12 +270,12 @@
       <div class="postcard back-card">
         <div class="back-content">
           <div class="observation">
-            <h2 id="cambridge-back-title">A moment I noticed</h2>
+            <h2 id="cambridge-back-title">A moment I looked twice</h2>
             <p>The sky appears twice: once above the shore, and once on the water.</p>
           </div>
           <div class="postcard-mark" aria-hidden="true"><span>From<br>Cambridge</span></div>
         </div>
-        <p class="back-location">Cambridge</p>
+        <p class="back-location">Cambridge, England</p>
       </div>
       <div class="flip-link"><a class="button" href="#cambridge-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -278,13 +291,13 @@
       <figure class="postcard photo-card">
         <div class="photo-window">
           <img src="assets/images/Paris.jpg"
-               alt="Rows of fruit arranged in boxes at a market." decoding="async" loading="lazy">
+               alt="Versailles" decoding="async" loading="lazy">
         </div>
-        <figcaption>Paris</figcaption>
+        <figcaption>Paris, France</figcaption>
       </figure>
       <div class="flip-link"><a class="button" href="#paris-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
-        <a href="#cambridge-photo">Previous</a>
+        <a href="#paris-photo">Previous</a>
         <span class="counter">Moment 8 / 11</span>
         <a href="#qinhuangdao-photo">Next moment</a>
       </nav>
@@ -294,12 +307,12 @@
       <div class="postcard back-card">
         <div class="back-content">
           <div class="observation">
-            <h2 id="paris-back-title">A moment I noticed</h2>
-            <p>Rows of fruit make small blocks of color. There is a different shape in every box.</p>
+            <h2 id="paris-back-title">A moment I looked up</h2>
+            <p>The Palace of Versailles seems perfectly ordered, and so does the sky above it.</p>
           </div>
           <div class="postcard-mark" aria-hidden="true"><span>From<br>Paris</span></div>
         </div>
-        <p class="back-location">Paris</p>
+        <p class="back-location">Paris, France</p>
       </div>
       <div class="flip-link"><a class="button" href="#paris-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -317,7 +330,7 @@
           <img src="assets/images/Qinhuangdao.jpg"
                alt="A light-colored house framed by green trees." decoding="async" loading="lazy">
         </div>
-        <figcaption>Qinhuangdao</figcaption>
+        <figcaption>Qinhuangdao, China</figcaption>
       </figure>
       <div class="flip-link"><a class="button" href="#qinhuangdao-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -331,12 +344,12 @@
       <div class="postcard back-card">
         <div class="back-content">
           <div class="observation">
-            <h2 id="qinhuangdao-back-title">A moment I noticed</h2>
-            <p>A pale wall sits between the trees. Green leaves reach into the view from both sides.</p>
+            <h2 id="qinhuangdao-back-title">A moment I wondered</h2>
+            <p>A quiet house behind the trees. For a moment, I wondered what it would be like to live there.</p>
           </div>
           <div class="postcard-mark" aria-hidden="true"><span>From<br>Qinhuangdao</span></div>
         </div>
-        <p class="back-location">Qinhuangdao</p>
+        <p class="back-location">Qinhuangdao, China</p>
       </div>
       <div class="flip-link"><a class="button" href="#qinhuangdao-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -354,7 +367,7 @@
           <img src="assets/images/Tokyo.JPG"
                alt="Blue hydrangeas among dense green leaves." decoding="async" loading="lazy">
         </div>
-        <figcaption>Tokyo</figcaption>
+        <figcaption>Tokyo, Japan</figcaption>
       </figure>
       <div class="flip-link"><a class="button" href="#tokyo-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -368,12 +381,12 @@
       <div class="postcard back-card">
         <div class="back-content">
           <div class="observation">
-            <h2 id="tokyo-back-title">A moment I noticed</h2>
-            <p>Several shades of blue sit among the leaves. Even the flowers beside each other are different.</p>
+            <h2 id="tokyo-back-title">A moment I found color</h2>
+            <p>For a moment, blue seemed to grow out of every patch of green.</p>
           </div>
           <div class="postcard-mark" aria-hidden="true"><span>From<br>Tokyo</span></div>
         </div>
-        <p class="back-location">Tokyo</p>
+        <p class="back-location">Tokyo, Japan</p>
       </div>
       <div class="flip-link"><a class="button" href="#tokyo-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -391,7 +404,7 @@
           <img src="assets/images/Irvine.jpg"
                alt="White waves meeting the shore beneath a blue sky." decoding="async" loading="lazy">
         </div>
-        <figcaption>Irvine</figcaption>
+        <figcaption>Irvine, California</figcaption>
       </figure>
       <div class="flip-link"><a class="button" href="#Irvine-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -405,12 +418,12 @@
       <div class="postcard back-card">
         <div class="back-content">
           <div class="observation">
-            <h2 id="Irvine-back-title">A moment I noticed</h2>
-            <p>A thin line of white marks where a wave meets the shore. There is another line just behind it.</p>
+            <h2 id="Irvine-back-title">A moment I stayed</h2>
+            <p>The waves kept folding into the shore. I watched until I stopped counting them.</p>
           </div>
           <div class="postcard-mark" aria-hidden="true"><span>From<br>Irvine</span></div>
         </div>
-        <p class="back-location">Irvine</p>
+        <p class="back-location">Irvine, California</p>
       </div>
       <div class="flip-link"><a class="button" href="#Irvine-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
@@ -421,8 +434,71 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <a href="https://github.com/manlin025/manlin_undervalued_value/tree/HEAD/assets">View Project Materials</a>
-  </footer>
+<footer class="site-footer">
+  <a href="https://github.com/manlin025/manlin_undervalued_value/tree/HEAD/assets">
+    View Project Materials
+  </a>
+</footer>
+
+<script>
+  const flipLinks = document.querySelectorAll('.flip-link a');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const postcardFlipSound = new Audio('assets/sound/sound_of_pages_turning.mp3');
+  postcardFlipSound.preload = 'auto';
+  postcardFlipSound.volume = 0.42;
+
+  function playPostcardFlip() {
+    postcardFlipSound.currentTime = 0;
+    postcardFlipSound.play().catch(() => {});
+  }
+
+  flipLinks.forEach(link => {
+    link.addEventListener('click', async function(event) {
+      event.preventDefault();
+
+      const currentMoment = this.closest('.moment');
+      const currentCard = currentMoment.querySelector('.postcard');
+      const destination = this.getAttribute('href');
+      const nextMoment = document.querySelector(destination);
+
+      if (!nextMoment || this.getAttribute('aria-busy') === 'true') return;
+
+      this.setAttribute('aria-busy', 'true');
+      playPostcardFlip();
+
+      if (!reduceMotion) {
+        const fadeOut = currentCard.animate(
+          [
+            { opacity: 1, transform: 'translateY(0)' },
+            { opacity: 0, transform: 'translateY(-8px)' }
+          ],
+          { duration: 700, easing: 'ease-in', fill: 'forwards' }
+        );
+        await fadeOut.finished;
+      }
+
+      window.location.hash = destination;
+      nextMoment.focus({ preventScroll: true });
+      nextMoment.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+
+      const nextCard = nextMoment.querySelector('.postcard');
+
+      if (!reduceMotion) {
+        const fadeIn = nextCard.animate(
+          [
+            { opacity: 0, transform: 'translateY(8px)' },
+            { opacity: 1, transform: 'translateY(0)' }
+          ],
+          { duration: 900, easing: 'ease-out', fill: 'both' }
+        );
+        await fadeIn.finished;
+      }
+
+      this.removeAttribute('aria-busy');
+    });
+  });
+
+</script>
+
 </body>
 </html>
