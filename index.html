@@ -443,13 +443,74 @@
 <script>
   const flipLinks = document.querySelectorAll('.flip-link a');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const postcardFlipSound = new Audio('assets/sound/sound_of_pages_turning.mp3');
+
+  const postcardFlipSound = new Audio('assets/sounds/sound_of_pages_turning.mp3');
   postcardFlipSound.preload = 'auto';
   postcardFlipSound.volume = 0.42;
+
+  // 以后在这里给其他明信片加声音
+  const ambientSounds = {
+    'aruba-back': 'assets/sounds/aruba-waves.mp3',
+    'beijing-back': '',
+    'chapel-hill-back': '',
+    'Evaston-back': '',
+    'kyoto-back': '',
+    'la-back': '',
+    'cambridge-back': '',
+    'paris-back': '',
+    'qinhuangdao-back': '',
+    'tokyo-back': '',
+    'Irvine-back': ''
+  };
+
+  const ambience = new Audio();
+  ambience.preload = 'auto';
+  ambience.loop = true;
+  ambience.volume = 0;
+
+  let ambientFade;
+  let currentAmbientSource = '';
 
   function playPostcardFlip() {
     postcardFlipSound.currentTime = 0;
     postcardFlipSound.play().catch(() => {});
+  }
+
+  function fadeAmbience(targetVolume, duration = 1200) {
+    cancelAnimationFrame(ambientFade);
+
+    const startVolume = ambience.volume;
+    const startTime = performance.now();
+
+    function step(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      ambience.volume = startVolume + (targetVolume - startVolume) * progress;
+
+      if (progress < 1) {
+        ambientFade = requestAnimationFrame(step);
+      } else if (targetVolume === 0) {
+        ambience.pause();
+        ambience.currentTime = 0;
+      }
+    }
+
+    ambientFade = requestAnimationFrame(step);
+  }
+
+  function startAmbience(source) {
+    if (currentAmbientSource !== source) {
+      ambience.pause();
+      ambience.src = source;
+      currentAmbientSource = source;
+    }
+
+    ambience.play().then(() => fadeAmbience(0.18, 3000)).catch(() => {});
+  }
+
+  function stopAmbience() {
+    if (!ambience.paused || ambience.volume > 0) {
+      fadeAmbience(0);
+    }
   }
 
   flipLinks.forEach(link => {
@@ -464,7 +525,21 @@
       if (!nextMoment || this.getAttribute('aria-busy') === 'true') return;
 
       this.setAttribute('aria-busy', 'true');
+
+      const destinationSound = ambientSounds[nextMoment.id];
+      let flipSoundFinished = Promise.resolve();
+
+      if (destinationSound) {
+        flipSoundFinished = new Promise(resolve => {
+          postcardFlipSound.addEventListener('ended', resolve, { once: true });
+        });
+      }
+
       playPostcardFlip();
+
+      if (ambientSounds[currentMoment.id]) {
+        stopAmbience();
+      }
 
       if (!reduceMotion) {
         const fadeOut = currentCard.animate(
@@ -479,7 +554,10 @@
 
       window.location.hash = destination;
       nextMoment.focus({ preventScroll: true });
-      nextMoment.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      nextMoment.scrollIntoView({
+        behavior: reduceMotion ? 'auto' : 'smooth',
+        block: 'start'
+      });
 
       const nextCard = nextMoment.querySelector('.postcard');
 
@@ -494,10 +572,24 @@
         await fadeIn.finished;
       }
 
+      if (destinationSound) {
+        await flipSoundFinished;
+        if (window.location.hash === destination) {
+          startAmbience(destinationSound);
+        }
+      }
+
       this.removeAttribute('aria-busy');
     });
   });
 
+  window.addEventListener('hashchange', () => {
+    const currentID = window.location.hash.slice(1);
+
+    if (!ambientSounds[currentID]) {
+      stopAmbience();
+    }
+  });
 </script>
 
 </body>
