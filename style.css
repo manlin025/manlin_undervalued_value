@@ -240,3 +240,16 @@ a:focus-visible,
     display: none;
   }
 }
+
+/* 只显示当前明信片 */
+.postcards > .moment:not(.is-active) {
+  display: none !important;
+}
+
+.postcards > .moment.is-active {
+  display: block !important;
+}
+
+.moment:focus {
+  outline: none;
+}
