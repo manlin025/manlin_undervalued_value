@@ -645,7 +645,7 @@
       function step(now) {
         const progress = Math.min((now - startTime) / duration, 1);
 
-        // 柔和的渐入和渐出。
+        // 柔和的渐入和渐出
         const eased = progress * progress * (3 - 2 * progress);
 
         ambience.volume =
@@ -773,7 +773,7 @@
           );
         }
 
-        // 如果观众已经点了另一张，旧操作不再继续。
+        // 如果观众已经点了另一张，旧操作不再继续  
         if (thisNavigation !== navigationID) return;
 
         // pushState 不触发 hashchange，避免打断自己的动画。
@@ -827,7 +827,7 @@
       }
     }
 
-    // 翻面、Next、Previous 使用同一套导航。
+    // 翻面、Next、Previous 使用同一套导航
     document.querySelectorAll(
       '.flip-link a, .moment-nav a'
     ).forEach(link => {
@@ -855,7 +855,7 @@
       });
     });
 
-    // 浏览器后退／前进或手动修改地址时，恢复正确的卡片。
+    // 浏览器后退／前进或手动修改地址时，恢复正确的卡片
     function restoreFromAddress() {
       navigationID++;
       clearAnimations();
@@ -869,7 +869,7 @@
     window.addEventListener('popstate', restoreFromAddress);
     window.addEventListener('hashchange', restoreFromAddress);
 
-    // 切到其他标签页时停止声音。
+    // 切到其他标签页时停止声音
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) {
         stopAmbience(true);
