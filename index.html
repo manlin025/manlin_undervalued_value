@@ -3,882 +3,923 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Nothing Happened Here</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<body class="intro-pending">
+<button
+  class="intro-video"
+  type="button"
+  aria-label="Enter the postcard archive"
+  onclick="
+    document.body.classList.remove('intro-pending');
+    this.style.setProperty('display', 'none', 'important');
+    const openingVideo = this.querySelector('video');
+    if (openingVideo) openingVideo.pause();
+  "
+>
+  <video
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    aria-hidden="true"
+    style="pointer-events: none;"
+  >
+    <source
+      src="assets/videos/opening-envelope.mp4"
+      type="video/mp4"
+    >
+  </video>
+</button>
 
-<body>
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="about.html">About</a>
+  </nav>
   <header class="site-header">
     <h1>Nothing Happened Here</h1>
-    <p>Small, everyday moments from my travels. Take your time. Look once, then look again.</p>
+    <p>Through my lens, the world slows down.</p>
   </header>
-
   <main class="postcards" aria-label="Travel postcards">
-
     <!-- 1. Aruba -->
     <section class="moment is-active" id="aruba-photo" tabindex="-1" aria-label="Aruba photo">
       <figure class="postcard photo-card">
         <div class="photo-window">
-          <img
-            src="assets/images/Aruba.JPG"
-            alt="An open doorway framing a balcony, water, and the sky."
-            decoding="async">
+          <img src="assets/images/Aruba.JPG" alt="An open doorway framing a balcony, water, and the sky." decoding="async">
         </div>
         <figcaption>Palm Beach, Aruba</figcaption>
       </figure>
-
-      <div class="flip-link">
-        <a class="button" href="#aruba-back">Turn it over</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#aruba-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <span class="unavailable" aria-disabled="true">Previous</span>
         <span class="counter">Moment 1 / 11</span>
         <a href="#beijing-photo">Next moment</a>
       </nav>
     </section>
-
     <section class="moment" id="aruba-back" tabindex="-1" aria-label="Aruba postcard back">
       <div class="postcard back-card">
+        <p class="postcard-heading" aria-hidden="true">Post Card</p>
         <div class="back-content">
           <div class="observation">
             <h2>A moment I looked out</h2>
             <p>A view through an open door. The doorway makes a small frame for the water and sky.</p>
           </div>
-          <div class="postcard-mark" aria-hidden="true">
-            <span>From<br>Aruba</span>
+          <div class="address-side">
+            <div class="postcard-mark" aria-hidden="true"><span>From<br>Aruba</span></div>
+            <div class="postmark" aria-hidden="true"><span>Small moments<br>· Travel post ·</span></div>
+            <p class="address-label" aria-hidden="true">From</p>
+            <span class="address-line place">Palm Beach, Aruba</span>
+            <span class="address-line" aria-hidden="true"></span>
+            <span class="address-line" aria-hidden="true"></span>
           </div>
         </div>
         <p class="back-location">Palm Beach, Aruba</p>
       </div>
-
-      <div class="flip-link">
-        <a class="button" href="#aruba-photo">Back to photo</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#aruba-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <span class="unavailable" aria-disabled="true">Previous</span>
         <span class="counter">Moment 1 / 11</span>
         <a href="#beijing-photo">Next moment</a>
       </nav>
     </section>
-
     <!-- 2. Beijing -->
     <section class="moment" id="beijing-photo" tabindex="-1" aria-label="Beijing photo">
       <figure class="postcard photo-card">
         <div class="photo-window">
-          <img
-            src="assets/images/Beijing.jpg"
-            alt="A path beneath green trees with sunlight falling across it."
-            decoding="async">
+          <img src="assets/images/Beijing.jpg" alt="A path beneath green trees with sunlight falling across it." decoding="async">
         </div>
         <figcaption>Beijing, China</figcaption>
       </figure>
-
-      <div class="flip-link">
-        <a class="button" href="#beijing-back">Turn it over</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#beijing-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#aruba-photo">Previous</a>
         <span class="counter">Moment 2 / 11</span>
         <a href="#chapel-hill-photo">Next moment</a>
       </nav>
     </section>
-
     <section class="moment" id="beijing-back" tabindex="-1" aria-label="Beijing postcard back">
       <div class="postcard back-card">
+        <p class="postcard-heading" aria-hidden="true">Post Card</p>
         <div class="back-content">
           <div class="observation">
             <h2>A moment I noticed</h2>
             <p>Sunlight falls through the trees. Small patches of light break up the path.</p>
           </div>
-          <div class="postcard-mark" aria-hidden="true">
-            <span>From<br>Beijing</span>
+          <div class="address-side">
+            <div class="postcard-mark" aria-hidden="true"><span>From<br>Beijing</span></div>
+            <div class="postmark" aria-hidden="true"><span>Small moments<br>· Travel post ·</span></div>
+            <p class="address-label" aria-hidden="true">From</p>
+            <span class="address-line place">Beijing, China</span>
+            <span class="address-line" aria-hidden="true"></span>
+            <span class="address-line" aria-hidden="true"></span>
           </div>
         </div>
         <p class="back-location">Beijing, China</p>
       </div>
-
-      <div class="flip-link">
-        <a class="button" href="#beijing-photo">Back to photo</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#beijing-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#aruba-photo">Previous</a>
         <span class="counter">Moment 2 / 11</span>
         <a href="#chapel-hill-photo">Next moment</a>
       </nav>
     </section>
-
     <!-- 3. Chapel Hill -->
     <section class="moment" id="chapel-hill-photo" tabindex="-1" aria-label="Chapel Hill photo">
       <figure class="postcard photo-card">
         <div class="photo-window">
-          <img
-            src="assets/images/Chapel%20hill.jpg"
-            alt="Trees and a lawn in front of brick buildings."
-            decoding="async">
+          <img src="assets/images/Chapel%20hill.jpg" alt="Trees and a lawn in front of brick buildings." decoding="async">
         </div>
         <figcaption>Chapel Hill, North Carolina</figcaption>
       </figure>
-
-      <div class="flip-link">
-        <a class="button" href="#chapel-hill-back">Turn it over</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#chapel-hill-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#beijing-photo">Previous</a>
         <span class="counter">Moment 3 / 11</span>
-        <a href="#Evaston-photo">Next moment</a>
+        <a href="#Evanston-photo">Next moment</a>
       </nav>
     </section>
-
     <section class="moment" id="chapel-hill-back" tabindex="-1" aria-label="Chapel Hill postcard back">
       <div class="postcard back-card">
+        <p class="postcard-heading" aria-hidden="true">Post Card</p>
         <div class="back-content">
           <div class="observation">
             <h2>A moment I wandered</h2>
-            <p>I wandered without a destination. The campus looked different when I wasn't rushing somewhere.</p>
+            <p>I wandered without a destination. The campus looked different when I wasn&#x27;t rushing somewhere.</p>
           </div>
-          <div class="postcard-mark" aria-hidden="true">
-            <span>From<br>Chapel Hill</span>
+          <div class="address-side">
+            <div class="postcard-mark" aria-hidden="true"><span>From<br>Chapel Hill</span></div>
+            <div class="postmark" aria-hidden="true"><span>Small moments<br>· Travel post ·</span></div>
+            <p class="address-label" aria-hidden="true">From</p>
+            <span class="address-line place">Chapel Hill, North Carolina</span>
+            <span class="address-line" aria-hidden="true"></span>
+            <span class="address-line" aria-hidden="true"></span>
           </div>
         </div>
         <p class="back-location">Chapel Hill, North Carolina</p>
       </div>
-
-      <div class="flip-link">
-        <a class="button" href="#chapel-hill-photo">Back to photo</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#chapel-hill-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#beijing-photo">Previous</a>
         <span class="counter">Moment 3 / 11</span>
-        <a href="#Evaston-photo">Next moment</a>
+        <a href="#Evanston-photo">Next moment</a>
       </nav>
     </section>
-
-    <!-- 4. Evaston -->
-    <section class="moment" id="Evaston-photo" tabindex="-1" aria-label="Evaston photo">
+    <!-- 4. Evanston -->
+    <section class="moment" id="Evanston-photo" tabindex="-1" aria-label="Evanston photo">
       <figure class="postcard photo-card">
         <div class="photo-window">
-          <img
-            src="assets/images/Evaston.jpg"
-            alt="A tree-lined street."
-            decoding="async">
+          <img src="assets/images/Evanston.jpg" alt="A tree-lined street." decoding="async">
         </div>
-        <figcaption>Evaston, Illinois</figcaption>
+        <figcaption>Evanston, Illinois</figcaption>
       </figure>
-
-      <div class="flip-link">
-        <a class="button" href="#Evaston-back">Turn it over</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#Evanston-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#chapel-hill-photo">Previous</a>
         <span class="counter">Moment 4 / 11</span>
         <a href="#kyoto-photo">Next moment</a>
       </nav>
     </section>
-
-    <section class="moment" id="Evaston-back" tabindex="-1" aria-label="Evaston postcard back">
+    <section class="moment" id="Evanston-back" tabindex="-1" aria-label="Evanston postcard back">
       <div class="postcard back-card">
+        <p class="postcard-heading" aria-hidden="true">Post Card</p>
         <div class="back-content">
           <div class="observation">
             <h2>A moment I stopped</h2>
             <p>A tree lined street I had never walked before, yet somehow it felt familiar.</p>
           </div>
-          <div class="postcard-mark" aria-hidden="true">
-            <span>From<br>Evaston</span>
+          <div class="address-side">
+            <div class="postcard-mark" aria-hidden="true"><span>From<br>Evanston</span></div>
+            <div class="postmark" aria-hidden="true"><span>Small moments<br>· Travel post ·</span></div>
+            <p class="address-label" aria-hidden="true">From</p>
+            <span class="address-line place">Evanston, Illinois</span>
+            <span class="address-line" aria-hidden="true"></span>
+            <span class="address-line" aria-hidden="true"></span>
           </div>
         </div>
-        <p class="back-location">Evaston, Illinois</p>
+        <p class="back-location">Evanston, Illinois</p>
       </div>
-
-      <div class="flip-link">
-        <a class="button" href="#Evaston-photo">Back to photo</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#Evanston-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#chapel-hill-photo">Previous</a>
         <span class="counter">Moment 4 / 11</span>
         <a href="#kyoto-photo">Next moment</a>
       </nav>
     </section>
-
     <!-- 5. Kyoto -->
     <section class="moment" id="kyoto-photo" tabindex="-1" aria-label="Kyoto photo">
       <figure class="postcard photo-card">
         <div class="photo-window">
-          <img
-            src="assets/images/Kyoto.JPG"
-            alt="Two pale pink paper cranes against a background of dark leaves."
-            decoding="async">
+          <img src="assets/images/Kyoto.JPG" alt="Two pale pink paper cranes against a background of dark leaves." decoding="async">
         </div>
         <figcaption>Kyoto, Japan</figcaption>
       </figure>
-
-      <div class="flip-link">
-        <a class="button" href="#kyoto-back">Turn it over</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#kyoto-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
-        <a href="#Evaston-photo">Previous</a>
+        <a href="#Evanston-photo">Previous</a>
         <span class="counter">Moment 5 / 11</span>
         <a href="#la-photo">Next moment</a>
       </nav>
     </section>
-
     <section class="moment" id="kyoto-back" tabindex="-1" aria-label="Kyoto postcard back">
       <div class="postcard back-card">
+        <p class="postcard-heading" aria-hidden="true">Post Card</p>
         <div class="back-content">
           <div class="observation">
             <h2>A moment I carried home</h2>
             <p>In Arashiyama, a café owner folded a small piece of the journey into my hands.</p>
           </div>
-          <div class="postcard-mark" aria-hidden="true">
-            <span>From<br>Kyoto</span>
+          <div class="address-side">
+            <div class="postcard-mark" aria-hidden="true"><span>From<br>Kyoto</span></div>
+            <div class="postmark" aria-hidden="true"><span>Small moments<br>· Travel post ·</span></div>
+            <p class="address-label" aria-hidden="true">From</p>
+            <span class="address-line place">Kyoto, Japan</span>
+            <span class="address-line" aria-hidden="true"></span>
+            <span class="address-line" aria-hidden="true"></span>
           </div>
         </div>
         <p class="back-location">Kyoto, Japan</p>
       </div>
-
-      <div class="flip-link">
-        <a class="button" href="#kyoto-photo">Back to photo</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#kyoto-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
-        <a href="#Evaston-photo">Previous</a>
+        <a href="#Evanston-photo">Previous</a>
         <span class="counter">Moment 5 / 11</span>
         <a href="#la-photo">Next moment</a>
       </nav>
     </section>
-
     <!-- 6. Los Angeles -->
     <section class="moment" id="la-photo" tabindex="-1" aria-label="Los Angeles photo">
       <figure class="postcard photo-card">
         <div class="photo-window">
-          <img
-            src="assets/images/LA.JPG"
-            alt="A cluster of pale flowers surrounded by green leaves."
-            decoding="async">
+          <img src="assets/images/LA.JPG" alt="A cluster of pale flowers surrounded by green leaves." decoding="async">
         </div>
         <figcaption>Los Angeles, California</figcaption>
       </figure>
-
-      <div class="flip-link">
-        <a class="button" href="#la-back">Turn it over</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#la-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#kyoto-photo">Previous</a>
         <span class="counter">Moment 6 / 11</span>
         <a href="#cambridge-photo">Next moment</a>
       </nav>
     </section>
-
     <section class="moment" id="la-back" tabindex="-1" aria-label="Los Angeles postcard back">
       <div class="postcard back-card">
+        <p class="postcard-heading" aria-hidden="true">Post Card</p>
         <div class="back-content">
           <div class="observation">
             <h2>A moment I looked closer</h2>
             <p>Somewhere in Beverly Hills, small pale flowers gather into one shape. Looking closer, each flower has its own edges.</p>
           </div>
-          <div class="postcard-mark" aria-hidden="true">
-            <span>From<br>LA</span>
+          <div class="address-side">
+            <div class="postcard-mark" aria-hidden="true"><span>From<br>LA</span></div>
+            <div class="postmark" aria-hidden="true"><span>Small moments<br>· Travel post ·</span></div>
+            <p class="address-label" aria-hidden="true">From</p>
+            <span class="address-line place">Los Angeles, California</span>
+            <span class="address-line" aria-hidden="true"></span>
+            <span class="address-line" aria-hidden="true"></span>
           </div>
         </div>
         <p class="back-location">Los Angeles, California</p>
       </div>
-
-      <div class="flip-link">
-        <a class="button" href="#la-photo">Back to photo</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#la-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#kyoto-photo">Previous</a>
         <span class="counter">Moment 6 / 11</span>
         <a href="#cambridge-photo">Next moment</a>
       </nav>
     </section>
-
     <!-- 7. Cambridge -->
     <section class="moment" id="cambridge-photo" tabindex="-1" aria-label="Cambridge photo">
       <figure class="postcard photo-card">
         <div class="photo-window">
-          <img
-            src="assets/images/Cambridge.jpg"
-            alt="Evening clouds and a dark shoreline reflected in water."
-            decoding="async">
+          <img src="assets/images/Cambridge.jpg" alt="Evening clouds and a dark shoreline reflected in water." decoding="async">
         </div>
         <figcaption>Cambridge, England</figcaption>
       </figure>
-
-      <div class="flip-link">
-        <a class="button" href="#cambridge-back">Turn it over</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#cambridge-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#la-photo">Previous</a>
         <span class="counter">Moment 7 / 11</span>
         <a href="#paris-photo">Next moment</a>
       </nav>
     </section>
-
     <section class="moment" id="cambridge-back" tabindex="-1" aria-label="Cambridge postcard back">
       <div class="postcard back-card">
+        <p class="postcard-heading" aria-hidden="true">Post Card</p>
         <div class="back-content">
           <div class="observation">
             <h2>A moment I looked twice</h2>
             <p>The sky appears twice: once above the shore, and once on the water.</p>
           </div>
-          <div class="postcard-mark" aria-hidden="true">
-            <span>From<br>Cambridge</span>
+          <div class="address-side">
+            <div class="postcard-mark" aria-hidden="true"><span>From<br>Cambridge</span></div>
+            <div class="postmark" aria-hidden="true"><span>Small moments<br>· Travel post ·</span></div>
+            <p class="address-label" aria-hidden="true">From</p>
+            <span class="address-line place">Cambridge, England</span>
+            <span class="address-line" aria-hidden="true"></span>
+            <span class="address-line" aria-hidden="true"></span>
           </div>
         </div>
         <p class="back-location">Cambridge, England</p>
       </div>
-
-      <div class="flip-link">
-        <a class="button" href="#cambridge-photo">Back to photo</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#cambridge-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#la-photo">Previous</a>
         <span class="counter">Moment 7 / 11</span>
         <a href="#paris-photo">Next moment</a>
       </nav>
     </section>
-
     <!-- 8. Paris -->
     <section class="moment" id="paris-photo" tabindex="-1" aria-label="Paris photo">
       <figure class="postcard photo-card">
         <div class="photo-window">
-          <img
-            src="assets/images/Paris.jpg"
-            alt="The Palace of Versailles."
-            decoding="async">
+          <img src="assets/images/Paris.jpg" alt="The Palace of Versailles." decoding="async">
         </div>
         <figcaption>Paris, France</figcaption>
       </figure>
-
-      <div class="flip-link">
-        <a class="button" href="#paris-back">Turn it over</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#paris-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#cambridge-photo">Previous</a>
         <span class="counter">Moment 8 / 11</span>
         <a href="#qinhuangdao-photo">Next moment</a>
       </nav>
     </section>
-
     <section class="moment" id="paris-back" tabindex="-1" aria-label="Paris postcard back">
       <div class="postcard back-card">
+        <p class="postcard-heading" aria-hidden="true">Post Card</p>
         <div class="back-content">
           <div class="observation">
             <h2>A moment I looked up</h2>
             <p>The Palace of Versailles seems perfectly ordered, and so does the sky above it.</p>
           </div>
-          <div class="postcard-mark" aria-hidden="true">
-            <span>From<br>Paris</span>
+          <div class="address-side">
+            <div class="postcard-mark" aria-hidden="true"><span>From<br>Paris</span></div>
+            <div class="postmark" aria-hidden="true"><span>Small moments<br>· Travel post ·</span></div>
+            <p class="address-label" aria-hidden="true">From</p>
+            <span class="address-line place">Paris, France</span>
+            <span class="address-line" aria-hidden="true"></span>
+            <span class="address-line" aria-hidden="true"></span>
           </div>
         </div>
         <p class="back-location">Paris, France</p>
       </div>
-
-      <div class="flip-link">
-        <a class="button" href="#paris-photo">Back to photo</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#paris-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#cambridge-photo">Previous</a>
         <span class="counter">Moment 8 / 11</span>
         <a href="#qinhuangdao-photo">Next moment</a>
       </nav>
     </section>
-
     <!-- 9. Qinhuangdao -->
     <section class="moment" id="qinhuangdao-photo" tabindex="-1" aria-label="Qinhuangdao photo">
       <figure class="postcard photo-card">
         <div class="photo-window">
-          <img
-            src="assets/images/Qinhuangdao.jpg"
-            alt="A light-colored house framed by green trees."
-            decoding="async">
+          <img src="assets/images/Qinhuangdao.jpg" alt="A light-colored house framed by green trees." decoding="async">
         </div>
         <figcaption>Qinhuangdao, China</figcaption>
       </figure>
-
-      <div class="flip-link">
-        <a class="button" href="#qinhuangdao-back">Turn it over</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#qinhuangdao-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#paris-photo">Previous</a>
         <span class="counter">Moment 9 / 11</span>
         <a href="#tokyo-photo">Next moment</a>
       </nav>
     </section>
-
     <section class="moment" id="qinhuangdao-back" tabindex="-1" aria-label="Qinhuangdao postcard back">
       <div class="postcard back-card">
+        <p class="postcard-heading" aria-hidden="true">Post Card</p>
         <div class="back-content">
           <div class="observation">
             <h2>A moment I wondered</h2>
             <p>A quiet house behind the trees. For a moment, I wondered what it would be like to live there.</p>
           </div>
-          <div class="postcard-mark" aria-hidden="true">
-            <span>From<br>Qinhuangdao</span>
+          <div class="address-side">
+            <div class="postcard-mark" aria-hidden="true"><span>From<br>Qinhuangdao</span></div>
+            <div class="postmark" aria-hidden="true"><span>Small moments<br>· Travel post ·</span></div>
+            <p class="address-label" aria-hidden="true">From</p>
+            <span class="address-line place">Qinhuangdao, China</span>
+            <span class="address-line" aria-hidden="true"></span>
+            <span class="address-line" aria-hidden="true"></span>
           </div>
         </div>
         <p class="back-location">Qinhuangdao, China</p>
       </div>
-
-      <div class="flip-link">
-        <a class="button" href="#qinhuangdao-photo">Back to photo</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#qinhuangdao-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#paris-photo">Previous</a>
         <span class="counter">Moment 9 / 11</span>
         <a href="#tokyo-photo">Next moment</a>
       </nav>
     </section>
-
     <!-- 10. Tokyo -->
     <section class="moment" id="tokyo-photo" tabindex="-1" aria-label="Tokyo photo">
       <figure class="postcard photo-card">
         <div class="photo-window">
-          <img
-            src="assets/images/Tokyo.JPG"
-            alt="Blue hydrangeas among dense green leaves."
-            decoding="async">
+          <img src="assets/images/Tokyo.JPG" alt="Blue hydrangeas among dense green leaves." decoding="async">
         </div>
         <figcaption>Tokyo, Japan</figcaption>
       </figure>
-
-      <div class="flip-link">
-        <a class="button" href="#tokyo-back">Turn it over</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#tokyo-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#qinhuangdao-photo">Previous</a>
         <span class="counter">Moment 10 / 11</span>
         <a href="#Irvine-photo">Next moment</a>
       </nav>
     </section>
-
     <section class="moment" id="tokyo-back" tabindex="-1" aria-label="Tokyo postcard back">
       <div class="postcard back-card">
+        <p class="postcard-heading" aria-hidden="true">Post Card</p>
         <div class="back-content">
           <div class="observation">
             <h2>A moment I found color</h2>
             <p>For a moment, blue seemed to grow out of every patch of green.</p>
           </div>
-          <div class="postcard-mark" aria-hidden="true">
-            <span>From<br>Tokyo</span>
+          <div class="address-side">
+            <div class="postcard-mark" aria-hidden="true"><span>From<br>Tokyo</span></div>
+            <div class="postmark" aria-hidden="true"><span>Small moments<br>· Travel post ·</span></div>
+            <p class="address-label" aria-hidden="true">From</p>
+            <span class="address-line place">Tokyo, Japan</span>
+            <span class="address-line" aria-hidden="true"></span>
+            <span class="address-line" aria-hidden="true"></span>
           </div>
         </div>
         <p class="back-location">Tokyo, Japan</p>
       </div>
-
-      <div class="flip-link">
-        <a class="button" href="#tokyo-photo">Back to photo</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#tokyo-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#qinhuangdao-photo">Previous</a>
         <span class="counter">Moment 10 / 11</span>
         <a href="#Irvine-photo">Next moment</a>
       </nav>
     </section>
-
     <!-- 11. Irvine -->
     <section class="moment" id="Irvine-photo" tabindex="-1" aria-label="Irvine photo">
       <figure class="postcard photo-card">
         <div class="photo-window">
-          <img
-            src="assets/images/Irvine.jpg"
-            alt="White waves meeting the shore beneath a blue sky."
-            decoding="async">
+          <img src="assets/images/Irvine.jpg" alt="White waves meeting the shore beneath a blue sky." decoding="async">
         </div>
         <figcaption>Irvine, California</figcaption>
       </figure>
-
-      <div class="flip-link">
-        <a class="button" href="#Irvine-back">Turn it over</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#Irvine-back">Turn it over</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#tokyo-photo">Previous</a>
         <span class="counter">Moment 11 / 11</span>
         <span class="unavailable" aria-disabled="true">Next moment</span>
       </nav>
     </section>
-
     <section class="moment" id="Irvine-back" tabindex="-1" aria-label="Irvine postcard back">
       <div class="postcard back-card">
+        <p class="postcard-heading" aria-hidden="true">Post Card</p>
         <div class="back-content">
           <div class="observation">
             <h2>A moment I stayed</h2>
             <p>The waves kept folding into the shore. I watched until I stopped counting them.</p>
           </div>
-          <div class="postcard-mark" aria-hidden="true">
-            <span>From<br>Irvine</span>
+          <div class="address-side">
+            <div class="postcard-mark" aria-hidden="true"><span>From<br>Irvine</span></div>
+            <div class="postmark" aria-hidden="true"><span>Small moments<br>· Travel post ·</span></div>
+            <p class="address-label" aria-hidden="true">From</p>
+            <span class="address-line place">Irvine, California</span>
+            <span class="address-line" aria-hidden="true"></span>
+            <span class="address-line" aria-hidden="true"></span>
           </div>
         </div>
         <p class="back-location">Irvine, California</p>
       </div>
-
-      <div class="flip-link">
-        <a class="button" href="#Irvine-photo">Back to photo</a>
-      </div>
-
+      <div class="flip-link"><a class="button" href="#Irvine-photo">Back to photo</a></div>
       <nav class="moment-nav" aria-label="Choose a moment">
         <a href="#tokyo-photo">Previous</a>
         <span class="counter">Moment 11 / 11</span>
         <span class="unavailable" aria-disabled="true">Next moment</span>
       </nav>
     </section>
-
   </main>
-
   <footer class="site-footer">
-    <a href="https://github.com/manlin025/manlin_undervalued_value/tree/HEAD/assets">
-      View Project Materials
-    </a>
+    <a href="https://github.com/manlin025/manlin_undervalued_value/tree/HEAD/assets">View Project Materials</a>
   </footer>
 
-  <script>
-    const moments = [...document.querySelectorAll('.moment')];
-    const reduceMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    );
+<script>
+(() => {
+  const intro = document.querySelector('.intro-video');
+  const moments = [...document.querySelectorAll('.moment')];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-    // 以后只需要在这里填写其他环境声的文件路径。
-    const ambientSounds = {
-      'aruba-back': 'assets/sounds/aruba-waves.mp3',
-      'beijing-back': 'assets/sounds/beijing-path-ambience.mp3',
-      'chapel-hill-back': 'assets/sounds/chapel-hill-ambience.mp3',
-      'Evaston-back': 'assets/sounds/evaston-ambience.mp3',
-      'kyoto-back': '',
-      'la-back': '',
-      'cambridge-back': '',
-      'paris-back': '',
-      'qinhuangdao-back': '',
-      'tokyo-back': '',
-      'Irvine-back': ''
-    };
+  const ambientSounds = {
+    'aruba-back': 'assets/sounds/aruba-waves.mp3',
+    'beijing-back': 'assets/sounds/beijing-path-ambience.mp3',
+    'chapel-hill-back': 'assets/sounds/chapel-hill-ambience.mp3',
+    'Evanston-back': 'assets/sounds/evanston-ambience.mp3',
+    'kyoto-back': 'assets/sounds/kyoto-ambience.mp3',
+    'la-back': 'assets/sounds/la-ambience.mp3',
+    'cambridge-back': 'assets/sounds/cambridge-ambience.mp3',
+    'paris-back': 'assets/sounds/paris-ambience.mp3',
+    'qinhuangdao-back': 'assets/sounds/qinhuangdao-ambience.mp3',
+    'tokyo-back': 'assets/sounds/tokyo-ambience.mp3',
+    'Irvine-back': 'assets/sounds/Irvine-ambience.mp3'
+  };
 
-    const flipSound = new Audio(
-      'assets/sounds/sound_of_pages_turning.mp3'
-    );
+  const postcardStamps = {
+    'aruba-back': 'assets/stamps/aruba.jpg',
+    'beijing-back': 'assets/stamps/beijing.png',
+    'chapel-hill-back': 'assets/stamps/chapel-hill.png',
+    'Evanston-back': 'assets/stamps/evanston.png',
+    'kyoto-back': 'assets/stamps/kyoto.png',
+    'la-back': 'assets/stamps/la.png',
+    'cambridge-back': 'assets/stamps/cambridge.png',
+    'paris-back': 'assets/stamps/paris.png',
+    'qinhuangdao-back': 'assets/stamps/qinhuangdao.png',
+    'tokyo-back': 'assets/stamps/tokyo.png',
+    'Irvine-back': 'assets/stamps/irvine.png'
+  };
 
-    flipSound.preload = 'auto';
-    flipSound.volume = 0.42;
+  const flipSound = new Audio('assets/sounds/postcard-page-turn.mp3');
+  flipSound.preload = 'auto';
+  flipSound.volume = 0.42;
 
-    const ambience = new Audio();
-    ambience.preload = 'auto';
-    ambience.loop = true;
+  const navigationSound = new Audio('assets/sounds/postcard-navigation.mp3');
+  navigationSound.preload = 'auto';
+  navigationSound.volume = 0.2;
+
+  // 按你电脑里现有文件的实际拼写使用：them。
+  const openingMusic = new Audio('assets/sounds/opening-envelope-them.mp3');
+  openingMusic.preload = 'auto';
+  openingMusic.volume = 0.3;
+  openingMusic.loop = false;
+
+  const ambience = new Audio();
+  ambience.preload = 'auto';
+  ambience.loop = true;
+  ambience.volume = 0;
+
+  let currentMoment = null;
+  let navigationID = 0;
+  let ambientFade = 0;
+  let cancelFlip = null;
+
+  const animations = new Set();
+
+  function stopAmbience() {
+    cancelAnimationFrame(ambientFade);
+    ambientFade = 0;
+    ambience.pause();
+    ambience.volume = 0;
+  }
+
+  function stopEffects() {
+    if (cancelFlip) cancelFlip();
+
+    navigationSound.pause();
+    navigationSound.currentTime = 0;
+  }
+
+  function prepareAmbience(source) {
+    if (!source) return Promise.resolve(false);
+
+    // 点击时以零音量准备，翻页声结束后才让环境声可听见。
+    ambience.src = source;
     ambience.volume = 0;
 
-    let currentMoment = null;
-    let navigationID = 0;
-    let ambientFade = 0;
-    let cancelFlipSound = null;
+    return ambience.play().then(() => true).catch(error => {
+      console.warn('Cannot play ambience:', source, error);
+      return false;
+    });
+  }
 
-    const activeAnimations = new Set();
+  function fadeInAmbience() {
+    ambience.currentTime = 0;
+    const start = performance.now();
 
-    function getMomentFromHash() {
-      const id = window.location.hash.slice(1);
-      return moments.find(moment => moment.id === id) || moments[0];
+    function step(now) {
+      const progress = Math.min((now - start) / 3000, 1);
+
+      ambience.volume =
+        0.18 * progress * progress * (3 - 2 * progress);
+
+      ambientFade = progress < 1
+        ? requestAnimationFrame(step)
+        : 0;
     }
 
-    function showMoment(target) {
-      moments.forEach(moment => {
-        moment.classList.toggle('is-active', moment === target);
-      });
+    ambientFade = requestAnimationFrame(step);
+  }
 
-      currentMoment = target;
-    }
+  function playFlipSound() {
+    flipSound.currentTime = 0;
 
-    // 只清理本脚本创建的动画。
-    function clearAnimations() {
-      activeAnimations.forEach(animation => animation.cancel());
-      activeAnimations.clear();
-    }
+    return new Promise(resolve => {
+      let settled = false;
 
-    async function animateCard(card, frames, duration) {
-      if (reduceMotion.matches || !card.animate) return;
+      function finish() {
+        if (settled) return;
+        settled = true;
 
-      const animation = card.animate(frames, {
-        duration,
-        easing: 'ease-in-out',
-        fill: 'both'
-      });
+        flipSound.removeEventListener('ended', finish);
+        flipSound.removeEventListener('error', onError);
 
-      activeAnimations.add(animation);
-
-      try {
-        await animation.finished;
-      } catch (error) {
-        // 快速点击其他导航时，允许旧动画被取消。
-        if (error.name !== 'AbortError') {
-          console.warn('Postcard animation:', error);
+        if (cancelFlip === cancel) {
+          cancelFlip = null;
         }
-      } finally {
-        // 不留下 opacity: 0，避免返回时出现空白。
-        animation.cancel();
-        activeAnimations.delete(animation);
+
+        resolve();
       }
+
+      function onError() {
+        console.warn('Cannot load flip sound:', flipSound.src);
+        finish();
+      }
+
+      function cancel() {
+        flipSound.pause();
+        finish();
+      }
+
+      cancelFlip = cancel;
+
+      flipSound.addEventListener('ended', finish);
+      flipSound.addEventListener('error', onError);
+
+      flipSound.play().catch(error => {
+        console.warn('Cannot play flip sound:', error);
+        finish();
+      });
+    });
+  }
+
+  function playNavigationSound() {
+    navigationSound.currentTime = 0;
+
+    navigationSound.play().catch(error => {
+      console.warn('Cannot play navigation sound:', error);
+    });
+  }
+
+  function clearAnimations() {
+    animations.forEach(animation => animation.cancel());
+    animations.clear();
+  }
+
+  async function animateCard(card, frames, duration) {
+    if (!card || reduceMotion.matches || !card.animate) return;
+
+    const animation = card.animate(frames, {
+      duration,
+      easing: 'ease-in-out',
+      fill: 'both'
+    });
+
+    animations.add(animation);
+
+    try {
+      await animation.finished;
+    } catch (error) {
+      if (error.name !== 'AbortError') {
+        console.warn('Animation:', error);
+      }
+    } finally {
+      animation.cancel();
+      animations.delete(animation);
+    }
+  }
+
+  function showMoment(target) {
+    if (!target) return;
+
+    moments.forEach(moment => {
+      moment.classList.toggle('is-active', moment === target);
+    });
+
+    currentMoment = target;
+  }
+
+  function getMomentFromHash() {
+    return moments.find(moment => {
+      return moment.id === location.hash.slice(1);
+    }) || moments[0];
+  }
+
+  async function navigateTo(target, isFlip) {
+    const id = ++navigationID;
+    const previous = currentMoment;
+
+    clearAnimations();
+    stopEffects();
+    stopAmbience();
+
+    const source = isFlip ? ambientSounds[target.id] : '';
+    const ambientReady = prepareAmbience(source);
+
+    const flipFinished = isFlip
+      ? playFlipSound()
+      : Promise.resolve();
+
+    if (!isFlip) {
+      playNavigationSound();
     }
 
-    function fadeAmbience(targetVolume, duration = 3000) {
-      cancelAnimationFrame(ambientFade);
+    const direction = target.id.endsWith('-back') ? -1 : 1;
 
-      const startVolume = ambience.volume;
-      const startTime = performance.now();
+    try {
+      if (previous && previous !== target) {
+        await animateCard(
+          previous.querySelector('.postcard'),
+          isFlip ? [
+            {
+              transform: 'rotateY(0deg) translateZ(0px)'
+            },
+            {
+              transform:
+                `rotateY(${direction * 90}deg) translateZ(60px)`
+            }
+          ] : [
+            {
+              opacity: 1,
+              transform: 'translateY(0)'
+            },
+            {
+              opacity: 0,
+              transform: 'translateY(-8px)'
+            }
+          ],
+          isFlip ? 480 : 180
+        );
+      }
 
-      function step(now) {
-        const progress = Math.min((now - startTime) / duration, 1);
+      if (id !== navigationID) return;
 
-        // 柔和的渐入和渐出
-        const eased = progress * progress * (3 - 2 * progress);
+      showMoment(target);
 
-        ambience.volume =
-          startVolume + (targetVolume - startVolume) * eased;
+      if (location.hash !== '#' + target.id) {
+        history.pushState(null, '', '#' + target.id);
+      }
 
-        if (progress < 1) {
-          ambientFade = requestAnimationFrame(step);
-        } else {
-          ambientFade = 0;
+      target.focus({ preventScroll: true });
 
-          if (targetVolume === 0) {
-            ambience.pause();
-            ambience.currentTime = 0;
+      if (!isFlip) {
+        target.scrollIntoView({
+          behavior: 'auto',
+          block: 'start'
+        });
+      }
+
+      await animateCard(
+        target.querySelector('.postcard'),
+        isFlip ? [
+          {
+            transform:
+              `rotateY(${-direction * 90}deg) translateZ(60px)`
+          },
+          {
+            transform: 'rotateY(0deg) translateZ(0px)'
           }
-        }
-      }
+        ] : [
+          {
+            opacity: 0,
+            transform: 'translateY(8px)'
+          },
+          {
+            opacity: 1,
+            transform: 'translateY(0)'
+          }
+        ],
+        isFlip ? 520 : 250
+      );
 
-      ambientFade = requestAnimationFrame(step);
-    }
+      // 等翻页音频实际结束，再淡入环境声。
+      const [, ready] = await Promise.all([
+        flipFinished,
+        ambientReady
+      ]);
 
-    function stopAmbience(immediately = false) {
-      cancelAnimationFrame(ambientFade);
-      ambientFade = 0;
-
-      if (immediately || ambience.paused || ambience.volume === 0) {
-        ambience.pause();
-        ambience.volume = 0;
-        ambience.currentTime = 0;
+      if (
+        id !== navigationID ||
+        document.hidden ||
+        currentMoment !== target
+      ) {
         return;
       }
 
-      fadeAmbience(0, 3000);
-    }
+      if (source && ready) {
+        fadeInAmbience();
+      }
+    } catch (error) {
+      console.warn('Navigation:', error);
 
-    // 在点击时先以零音量准备播放。
-    // 翻页声和动画结束之后，才将音量渐入。
-    function prepareAmbience(source) {
-      stopAmbience(true);
-      ambience.src = source;
-      ambience.volume = 0;
-
-      return ambience.play().then(() => true).catch(error => {
-        console.warn('Cannot play ambient sound:', source, error);
-        return false;
-      });
-    }
-
-    function playFlipSound() {
-      if (cancelFlipSound) cancelFlipSound();
-
-      flipSound.pause();
-      flipSound.currentTime = 0;
-
-      return new Promise(resolve => {
-        let settled = false;
-
-        function finish(success) {
-          if (settled) return;
-          settled = true;
-
-          flipSound.removeEventListener('ended', onEnded);
-          flipSound.removeEventListener('error', onError);
-
-          if (cancelFlipSound === cancel) {
-            cancelFlipSound = null;
-          }
-
-          resolve(success);
-        }
-
-        function onEnded() {
-          finish(true);
-        }
-
-        function onError() {
-          console.warn('Cannot load page-turn sound:', flipSound.src);
-          finish(false);
-        }
-
-        function cancel() {
-          flipSound.pause();
-          finish(false);
-        }
-
-        cancelFlipSound = cancel;
-
-        flipSound.addEventListener('ended', onEnded);
-        flipSound.addEventListener('error', onError);
-
-        flipSound.play().catch(error => {
-          console.warn('Cannot play page-turn sound:', error);
-          finish(false);
-        });
-      });
-    }
-
-    async function navigateTo(target, isFlip) {
-      const thisNavigation = ++navigationID;
-      const previousMoment = currentMoment;
-
-      clearAnimations();
-
-      if (cancelFlipSound) cancelFlipSound();
-      stopAmbience();
-
-      const soundSource = isFlip ? ambientSounds[target.id] : '';
-
-      const ambientReady = soundSource
-        ? prepareAmbience(soundSource)
-        : Promise.resolve(false);
-
-      const flipFinished = isFlip
-        ? playFlipSound()
-        : Promise.resolve(true);
-
-      try {
-        if (previousMoment && previousMoment !== target) {
-          await animateCard(
-            previousMoment.querySelector('.postcard'),
-            [
-              { opacity: 1, transform: 'translateY(0)' },
-              { opacity: 0, transform: 'translateY(-8px)' }
-            ],
-            isFlip ? 700 : 180
-          );
-        }
-
-        // 如果观众已经点了另一张，旧操作不再继续  
-        if (thisNavigation !== navigationID) return;
-
-        // pushState 不触发 hashchange，避免打断自己的动画。
-        if (window.location.hash !== '#' + target.id) {
-          history.pushState(null, '', '#' + target.id);
-        }
-
+      if (id === navigationID) {
+        clearAnimations();
+        stopEffects();
+        stopAmbience();
         showMoment(target);
-        target.focus({ preventScroll: true });
-        target.scrollIntoView({
-          behavior: 'instant',
-          block: 'start'
-        });
-
-        await animateCard(
-          target.querySelector('.postcard'),
-          [
-            { opacity: 0, transform: 'translateY(8px)' },
-            { opacity: 1, transform: 'translateY(0)' }
-          ],
-          isFlip ? 900 : 250
-        );
-
-        if (thisNavigation !== navigationID) return;
-
-        // 动画和翻页声都结束后，才让环境声变得可听见。
-        const [soundFinished, ready] = await Promise.all([
-          flipFinished,
-          ambientReady
-        ]);
-
-        if (
-          thisNavigation === navigationID &&
-          currentMoment === target &&
-          soundSource &&
-          soundFinished &&
-          ready &&
-          !document.hidden
-        ) {
-          ambience.currentTime = 0;
-          fadeAmbience(0.18, 3000);
-        }
-      } catch (error) {
-        console.warn('Postcard navigation:', error);
-
-        if (thisNavigation === navigationID) {
-          clearAnimations();
-          showMoment(target);
-          stopAmbience(true);
-        }
       }
     }
+  }
 
-    // 翻面、Next、Previous 使用同一套导航
-    document.querySelectorAll(
-      '.flip-link a, .moment-nav a'
-    ).forEach(link => {
-      link.addEventListener('click', event => {
-        // 保留 Command/Ctrl + 点击等浏览器默认操作
-        if (
-          event.button !== 0 ||
-          event.metaKey ||
-          event.ctrlKey ||
-          event.shiftKey ||
-          event.altKey
-        ) {
-          return;
-        }
+  // 开场自动播放，点一次信封直接进入，不添加提示文字。
+  if (intro) {
+    const video = intro.querySelector('video');
 
-        const targetID = link.getAttribute('href').slice(1);
-        const target = moments.find(moment => moment.id === targetID);
+    // 移除之前临时加在 HTML 上的点击代码，避免重复处理。
+    intro.removeAttribute('onclick');
 
-        if (!target) return;
+    intro.addEventListener('click', () => {
+      // 先进入页面，再停止视频和音乐。
+      document.body.classList.remove('intro-pending');
+      intro.style.setProperty('display', 'none', 'important');
 
-        event.preventDefault();
+      if (video) {
+        video.pause();
+      }
 
-        const isFlip = Boolean(link.closest('.flip-link'));
-        navigateTo(target, isFlip);
+      openingMusic.pause();
+    });
+
+    if (video) {
+      video.autoplay = true;
+      video.muted = true;
+      video.playsInline = true;
+      video.loop = false;
+      video.style.pointerEvents = 'none';
+
+      video.addEventListener('ended', () => {
+        openingMusic.pause();
       });
-    });
 
-    // 浏览器后退／前进或手动修改地址时，恢复正确的卡片
-    function restoreFromAddress() {
-      navigationID++;
-      clearAnimations();
+      video.play().catch(error => {
+        console.warn('Cannot play opening video:', error);
+      });
 
-      if (cancelFlipSound) cancelFlipSound();
-
-      stopAmbience(true);
-      showMoment(getMomentFromHash());
+      openingMusic.play().catch(error => {
+        console.warn('Opening music blocked or unavailable:', error);
+      });
     }
+  }
 
-    window.addEventListener('popstate', restoreFromAddress);
-    window.addEventListener('hashchange', restoreFromAddress);
+  // 邮票图片
+  Object.entries(postcardStamps).forEach(([id, path]) => {
+    const stamp = document.getElementById(id)
+      ?.querySelector('.postcard-mark');
 
-    // 切到其他标签页时停止声音
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
-        stopAmbience(true);
+    if (!stamp) return;
 
-        if (cancelFlipSound) cancelFlipSound();
+    const image = new Image();
+    image.alt = '';
+
+    image.onload = () => {
+      stamp.replaceChildren(image);
+      stamp.classList.add('has-stamp');
+    };
+
+    image.src = path;
+  });
+
+  // 翻面和 Previous / Next
+  document.querySelectorAll('.flip-link a, .moment-nav a').forEach(link => {
+    link.addEventListener('click', event => {
+      if (
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return;
       }
-    });
 
+      const href = link.getAttribute('href');
+
+      const target = moments.find(moment => {
+        return '#' + moment.id === href;
+      });
+
+      if (!target) return;
+
+      event.preventDefault();
+
+      navigateTo(
+        target,
+        Boolean(link.closest('.flip-link'))
+      );
+    });
+  });
+
+  function restoreFromAddress() {
+    navigationID++;
+    clearAnimations();
+    stopEffects();
+    stopAmbience();
     showMoment(getMomentFromHash());
-  </script>
+  }
+
+  window.addEventListener('popstate', restoreFromAddress);
+  window.addEventListener('hashchange', restoreFromAddress);
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      restoreFromAddress();
+    }
+  });
+
+  showMoment(getMomentFromHash());
+})();
+</script>
+
 </body>
 </html>
